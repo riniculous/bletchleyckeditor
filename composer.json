@@ -1,6 +1,6 @@
 {
-  "name": "craftcms/ckeditor",
-  "description": "Edit rich text content in Craft CMS using CKEditor.",
+  "name": "riniculous/bletchleyckeditor",
+  "description": "Edit rich text content in Craft CMS using CKEditor. Adds plugins",
   "version": "1.0.0-beta.2",
   "type": "craft-plugin",
   "keywords": [
@@ -33,8 +33,8 @@
     }
   },
   "extra": {
-    "name": "CKEditor",
-    "handle": "ckeditor",
+    "name": "bletchleyCKEditor",
+    "handle": "bletchleyckeditor",
     "documentationUrl": "https://github.com/craftcms/ckeditor/blob/master/README.md"
   }
 }

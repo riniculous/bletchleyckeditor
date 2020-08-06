@@ -34,7 +34,7 @@
   },
   "extra": {
     "name": "bletchleyCKEditor",
-    "handle": "bletchleyckeditor",
+    "handle": "bletchley-ckeditor",
     "documentationUrl": "https://github.com/craftcms/ckeditor/blob/master/README.md"
   }
 }

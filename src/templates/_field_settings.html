@@ -2,14 +2,14 @@
 
 <div id="purifier-config-container">
     {{ forms.selectField({
-        label: "CKEditor Config"|t('ckeditor'),
-        instructions: "You can save custom {name} configs as {ext} files in {path}."|t('ckeditor', {
+        label: "CKEditor Config"|t('bletcleyckeditor'),
+        instructions: "You can save custom {name} configs as {ext} files in {path}."|t('bletcleyckeditor', {
             name: 'CKEditor Config',
             ext: '`.json`',
             path: '`config/ckeditor/`'
         }) ~
         ' <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html"
-            target="_blank">'~"View available settings"|t('ckeditor')~'</a>',
+            target="_blank">'~"View available settings"|t('bletcleyckeditor')~'</a>',
         id: 'ckeditorConfig',
         name: 'ckeditorConfig',
         options: ckeditorConfigOptions,
@@ -18,9 +18,9 @@
 </div>
 
 {{ forms.checkboxField({
-    label: "Purify HTML?"|t('ckeditor'),
-    instructions: 'Removes any potentially-malicious code on save, by running the submitted data through <a href="http://htmlpurifier.org/" target="_blank">HTML Purifier</a>.'|t('ckeditor'),
-    warning: 'Disable this at your own risk!'|t('ckeditor'),
+    label: "Purify HTML?"|t('bletcleyckeditor'),
+    instructions: 'Removes any potentially-malicious code on save, by running the submitted data through <a href="http://htmlpurifier.org/" target="_blank">HTML Purifier</a>.'|t('bletcleyckeditor'),
+    warning: 'Disable this at your own risk!'|t('bletcleyckeditor'),
     id: 'purifyHtml',
     name: 'purifyHtml',
     checked: field.purifyHtml,
@@ -29,13 +29,13 @@
 
 <div id="purifier-config-container" {% if not field.purifyHtml %} class="hidden" {% endif %}>
     {{ forms.selectField({
-        label: "HTML Purifier Config"|t('ckeditor'),
-        instructions: "You can save custom {name} configs as {ext} files in {path}."|t('ckeditor', {
+        label: "HTML Purifier Config"|t('bletcleyckeditor'),
+        instructions: "You can save custom {name} configs as {ext} files in {path}."|t('bletcleyckeditor', {
             name: 'HTML Purifier Config',
             ext: '`.json`',
             path: '`config/htmlpurifier/`'
         }) ~
-        ' <a href="http://htmlpurifier.org/live/configdoc/plain.html" target="_blank">'~"View available settings"|t('ckeditor')~'</a>',
+        ' <a href="http://htmlpurifier.org/live/configdoc/plain.html" target="_blank">'~"View available settings"|t('bletcleyckeditor')~'</a>',
         id: 'purifierConfig',
         name: 'purifierConfig',
         options: purifierConfigOptions,
@@ -45,15 +45,15 @@
 
 {% if craft.app.db.isMysql %}
 {{ forms.selectField({
-        label: "Column Type"|t('ckeditor'),
+        label: "Column Type"|t('bletcleyckeditor'),
         id: 'column-type',
         name: 'columnType',
-        instructions: "The type of column this field should get in the database."|t('ckeditor'),
+        instructions: "The type of column this field should get in the database."|t('bletcleyckeditor'),
         options: [
             { value: 'text', label: 'text (~64KB)' },
             { value: 'mediumtext', label: 'mediumtext (~16MB)' },
         ],
         value: field.columnType,
-        warning: (field.id ? "Changing this may result in data loss."|t('ckeditor')),
+        warning: (field.id ? "Changing this may result in data loss."|t('bletcleyckeditor')),
     }) }}
 {% endif %}

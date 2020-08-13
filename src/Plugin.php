@@ -28,5 +28,13 @@ class Plugin extends \craft\base\Plugin
         Event::on(Fields::class, Fields::EVENT_REGISTER_FIELD_TYPES, function(RegisterComponentTypesEvent $e) {
             $e->types[] = Field::class;
         });
+
+          Craft::info(
+            Craft::t(
+                'bletcleyckeditor',
+                'Bletchley CKeditor'
+            ),
+            __METHOD__
+        );
     }
 }

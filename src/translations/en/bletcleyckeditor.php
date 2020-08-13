@@ -11,5 +11,5 @@
  * @since     1.0.0
  */
 return [
-    'ckeditor' => 'CKeditor',
+    'bletcleyckeditor' => 'Bletchley CKeditor',
 ];
